@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #202123;
+    color: white;
+
+}
+
+h3 {
+    padding: 15px;
+    margin-left: 658px;    
+    border-style: solid;
+    width: 86px;
+    border-radius: 50px;
+}
+
+h2 {
+    
+    margin-left: 535px;
+
+}
+
+
+form {
+    margin-left: 525px;
+    padding: 25px;
+    
+}
+
+button {
+    border-radius: 50px;
+    height: 30px;
+    width: 80px;
+    font-size: large;
+
+}
+
+#format {
+    height: 280px;
+    width: 200px;
+    border-style: solid;
+    margin-left: 610px;
+    background-image: url(Certificate_Acc_Data-2-1.png);
+    background-size: cover;
+
+}
+
+span {
+    margin-left: 655px;
+    font-size: 20px;
+}
+
+#rule1 {
+    margin-left: 25px;
+}
+
+#rule2 {
+    margin-left: 25px;
+}
+
+#rule3 {
+    margin-left: 25px;
+}
+
+
+
+
+
+#name {
+    
+    font-size: 50px;
+    /* margin-left: 400px; */
+    margin-top: 50px;
+}
+
+.maindiv {
+    display: flex;
+    gap: 190px;
+    background-color: white;
+    color:black;
+}
+
+
+#logo {
+
+    height: 150px;
+    width: 150px;
+    /* border-style: solid; */
+    
+    margin-left :50px;
+    background-image: url(Certificate\ Logo.png);
+    background-size: cover;
+
+
+
+}
+
+
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+
+#result {
+    margin-left: 550px;
+    
+}
