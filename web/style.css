@@ -1,14 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #202123;
-    color: white;
+    /* background-color: #202123; */
+    color: black;
+    background-color: #e7eadc;
 
 }
 
 h3 {
     padding: 15px;
-    margin-left: 658px;    
+    margin-left: 650px;    
     border-style: solid;
     width: 86px;
     border-radius: 50px;
@@ -29,24 +30,35 @@ form {
 
 button {
     border-radius: 50px;
-    height: 30px;
-    width: 80px;
-    font-size: large;
-
+    padding: 8px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background: #AACBC0; /* admin accent */
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-#format {
+button:hover {
+    background: #8aaea5;
+    color: white;
+}
+
+.format {
+    display: inline-block;
+
     height: 280px;
     width: 200px;
     border-style: solid;
-    margin-left: 610px;
+    margin-left: 335px;
     background-image: url(Certificate_Acc_Data-2-1.png);
     background-size: cover;
 
 }
 
 span {
-    margin-left: 655px;
+    margin-left: 365px;
     font-size: 20px;
 }
 
@@ -76,8 +88,8 @@ span {
 .maindiv {
     display: flex;
     gap: 190px;
-    background-color: white;
-    color:black;
+    background-color: #aacbc0;
+    color:white;
 }
 
 
@@ -105,4 +117,48 @@ hr {
 #result {
     margin-left: 550px;
     
+}
+
+
+
+.disclaimer h3 {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 1px solid #888;
+    font-size: 1rem;
+    background-color: rgba(110, 152, 146, 0.499);
+    color: rgb(4, 3, 3);
+}
+
+.disclaimer {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #AACBC0;
+    border-radius: 10px;
+
+    color: black;
+}
+
+.rule {
+    margin: 12px 0;
+    padding: 12px;
+    border-left: 4px solid #ff4d4d;
+    background: rgba(110, 152, 146, 0.499);
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+
+.ok {
+    display: inline-block;
+
+    height: 280px;
+    width: 200px;
+    border-style: solid;
+    margin-left: 170px;
+    background-image: url(Certificate_Acc_Data-2-1.png);
+    background-size: cover;
 }

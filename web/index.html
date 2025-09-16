@@ -13,17 +13,28 @@
     <hr>
     
     <h2>Upload Certificate for Verification</h2>
-    <h3>Disclaimer</h3>
-    <div id="rule2"><b>Permanent Ban from Admission Portal & University:</b>
-Students caught submitting fake documents will face a permanent ban from the university website, online admission portal (visa), and from seeking admission in this institution in the future.</div>
-    <div id="rule1"><b>Detection by Administration (Admin):</b>
-Any attempt to upload fake or forged certificates will be immediately detected by the college administration (Admin). Strict disciplinary action will be initiated without prior warning.
+    
+    <section class="disclaimer">
+        <h3>Disclaimer</h3>
+        <div class="rule">
+            <b>Permanent Ban from Admission Portal & University:</b>
+            Students caught submitting fake documents will face a permanent ban from the university website, admission portal, and from seeking admission in this institution in the future.
+        </div>
+        <div class="rule">
+            <b>Detection by Administration (Admin):</b>
+            Any attempt to upload fake or forged certificates will be immediately detected by the college administration. Strict disciplinary action will be initiated without prior warning.
+        </div>
+        <div class="rule">
+            <b>Academic Record Nullification:</b>
+            All previously granted admissions, results, or academic privileges will be declared null and void. The student will not be entitled to claim any academic benefit.
+        </div>
+    </section>
+   <div> <span>Degree Format New
+    </span>
+    <span>Degree format old</span>
     </div>
-    <div id="rule3"><b>Academic Record Nullification:</b>
-All previously granted admissions, results, or academic privileges will be declared null and void. The student will not be entitled to claim any academic benefit.</div>
-<br>
-    <span>Degree Format</span>
-    <Div id="format"></Div>
+    <div class="format"><span class=""></span>
+    <span class="ok"></span></div>
     <form action="/upload" method="POST" enctype="multipart/form-data" id="uploadForm">
         <input type="file" name="certificate" id="certificate" accept="image/*,application/pdf" required>
         <button type="submit">Verify</button>
