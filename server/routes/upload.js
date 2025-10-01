@@ -3,19 +3,19 @@ const router = express.Router();
 const multer = require('multer');
 const { execFile } = require('child_process');
 const path = require('path');
-const db = require('../services/db'); // db.js file import
+const db = require('../services/db'); 
 
 // File upload setup
-const upload = multer({ dest: path.join(__dirname, '..', 'uploads') });
+const upload = multer({ dest: path.join(global.appRoot, 'uploads') });
 
 router.post('/', upload.single('certificate'), (req, res) => {
     if (!req.file) return res.status(400).send('No file uploaded');
 
-    // Uploaded file ka absolute path
+    // The uploaded file's absolute path
     const filePath = req.file.path;
 
-    // Python OCR script ka absolute path
-    const pythonScript = path.resolve(__dirname, '..','..', 'python', 'ocr_extract.py');
+    // The Python OCR script's absolute path, using our new stable root
+    const pythonScript = path.join(global.appRoot, 'python', 'ocr_extract.py');
 
     // Run Python OCR
     execFile('python3', [pythonScript, filePath], (err, stdout) => {
@@ -27,6 +27,7 @@ router.post('/', upload.single('certificate'), (req, res) => {
         // Clean OCR text
         let extractedText = stdout.toString().trim();
         console.log("Extracted Text:", extractedText);
+        
 
         let cleanText = extractedText
             .replace(/\s+/g, " ")                // multiple spaces → single

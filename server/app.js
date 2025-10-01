@@ -3,6 +3,9 @@ const express = require('express');
 const path = require('path');
 const uploadRouter = require('./routes/upload');
 
+// This is the project root directory
+global.appRoot = path.resolve(__dirname, '..');
+
 const app = express();
 const PORT = 3000;
 
@@ -13,8 +16,8 @@ app.use(express.urlencoded({ extended: true }));
 // Upload route
 app.use('/upload', uploadRouter);
 
-// Optional: Serve frontend files (index.html, result.html) from web folder
-app.use(express.static(path.join(__dirname, '..', 'web')));
+// Serve frontend files (index.html, etc.) from the web folder
+app.use(express.static(path.join(global.appRoot, 'web')));
 
 // Start server
 app.listen(PORT, () => {
