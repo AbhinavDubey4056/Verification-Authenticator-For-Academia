@@ -1,10 +1,11 @@
 // server/app.js
 const express = require('express');
 const path = require('path');
+global.appRoot = path.resolve(__dirname, '..');
 const uploadRouter = require('./routes/upload');
 
 // This is the project root directory
-global.appRoot = path.resolve(__dirname, '..');
+
 
 const app = express();
 const PORT = 3000;
@@ -15,6 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Upload route
 app.use('/upload', uploadRouter);
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(global.appRoot, 'web', 'login.html'));
+});
 
 // Serve frontend files (index.html, etc.) from the web folder
 app.use(express.static(path.join(global.appRoot, 'web')));
